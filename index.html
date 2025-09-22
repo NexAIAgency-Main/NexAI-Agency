@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexAI Agency - Next Gen AI Agency</title>
+    <title>NexAI Agency by Jay Banlasan - Next Gen AI Agency</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -45,4 +45,1076 @@
             padding: 15px 0;
             position: sticky;
             top: 0;
-            z-index: 
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 10px;
+        }
+
+        .logo-subtitle {
+            font-size: 14px;
+            margin-left: 15px;
+            color: var(--gray);
+            font-weight: normal;
+        }
+
+        /* Navigation */
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--gray);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #f5f7fb 0%, #e8ecf1 100%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .byline {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-top: 20px;
+            font-weight: 600;
+        }
+
+        /* Motivation Section */
+        .motivation {
+            padding: 80px 0;
+            background: white;
+            text-align: center;
+        }
+
+        .motivation-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .motivation h2 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            color: var(--primary);
+        }
+
+        .motivation p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+
+        .signature {
+            text-align: right;
+            font-style: italic;
+            margin-top: 30px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .feature-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 30px;
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            color: var(--gray);
+        }
+
+        /* Dashboard Preview */
+        .dashboard-preview {
+            padding: 80px 0;
+            background: #f5f7fb;
+            text-align: center;
+        }
+
+        .dashboard-img {
+            max-width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-top: 40px;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .testimonial-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial {
+            background: #f5f7fb;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .client {
+            display: flex;
+            align-items: center;
+        }
+
+        .client img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+
+        .client-info h4 {
+            margin-bottom: 5px;
+        }
+
+        .client-info p {
+            font-style: normal;
+            color: var(--gray);
+            margin: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            color: #ddd;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            color: #aaa;
+        }
+
+        .copyright a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        /* Dashboard Layout (Logged In) */
+        .app-container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 260px;
+            background: white;
+            box-shadow: var(--box-shadow);
+            padding: 30px 0;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .sidebar-header {
+            padding: 0 25px 20px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 20px;
+        }
+
+        .sidebar-menu {
+            list-style: none;
+        }
+
+        .sidebar-menu li {
+            margin-bottom: 5px;
+        }
+
+        .sidebar-menu a {
+            display: flex;
+            align-items: center;
+            padding: 12px 25px;
+            color: var(--gray);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .sidebar-menu a:hover, .sidebar-menu a.active {
+            background: #f5f7fb;
+            color: var(--primary);
+            border-right: 3px solid var(--primary);
+        }
+
+        .sidebar-menu i {
+            margin-right: 10px;
+            font-size: 1.1rem;
+        }
+
+        .main-content {
+            flex: 1;
+            margin-left: 260px;
+            padding: 30px;
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .client-selector {
+            display: flex;
+            align-items: center;
+        }
+
+        .client-selector select {
+            padding: 10px 15px;
+            border-radius: var(--border-radius);
+            border: 1px solid #ddd;
+            background: white;
+            margin-left: 10px;
+            min-width: 200px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Dashboard Grid */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-card h3 {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .stat-card .value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .stat-card .trend {
+            margin-top: 10px;
+            color: var(--success);
+            font-weight: 600;
+        }
+
+        .chart-container {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        .chart-container h2 {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .chart-placeholder {
+            background: #f5f7fb;
+            height: 300px;
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray);
+        }
+
+        .ai-insights {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        .ai-insights h2 {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .insight-text {
+            background: #f5f7fb;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .accuracy-gauge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .gauge-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .gauge-label {
+            color: var(--gray);
+            margin-top: 10px;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            width: 100%;
+            max-width: 450px;
+            padding: 30px;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--gray);
+        }
+
+        .modal-header {
+            margin-bottom: 20px;
+        }
+
+        .modal-header h2 {
+            font-size: 1.8rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+            color: var(--gray);
+        }
+
+        .form-footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Tabs for Login/Signup */
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--gray);
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab.active {
+            color: var(--primary);
+            border-bottom: 3px solid var(--primary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .sidebar {
+                width: 220px;
+            }
+            
+            .main-content {
+                margin-left: 220px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 70px;
+                padding: 20px 0;
+            }
+            
+            .sidebar-header h2, .sidebar-menu span {
+                display: none;
+            }
+            
+            .sidebar-menu a {
+                justify-content: center;
+                padding: 15px;
+            }
+            
+            .sidebar-menu i {
+                margin-right: 0;
+                font-size: 1.3rem;
+            }
+            
+            .main-content {
+                margin-left: 70px;
+                padding: 20px;
+            }
+            
+            .dashboard-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .client-selector {
+                margin-bottom: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .logo-subtitle {
+                display: none;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .sidebar {
+                display: none;
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            .feature-cards, .testimonial-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Logged Out State - Home Page -->
+    <div id="logged-out-view">
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <i class="fas fa-brain"></i>
+                        <span>NexAI Agency <span class="logo-subtitle">by Jay Banlasan</span></span>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="#" onclick="showModal('auth-modal', 'login')">Login</a></li>
+                            <li><a href="#" class="btn btn-primary" onclick="showModal('auth-modal', 'signup')">Sign Up</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="container">
+                <h1>Next Generation AI Agency</h1>
+                <p>Smarter Insights. Better Accuracy. Real Growth.</p>
+                <a href="#" class="btn btn-primary" onclick="showModal('auth-modal', 'login')">Login to Your Account</a>
+                <div class="byline">NexAI Agency by Jay Banlasan</div>
+            </div>
+        </section>
+
+        <section class="motivation">
+            <div class="container">
+                <div class="motivation-content">
+                    <h2>Why I Created NexAI Agency</h2>
+                    <p>I founded NexAI Agency to democratize AI-powered analytics for businesses of all sizes. After witnessing how large corporations leveraged AI to dominate their markets while smaller businesses struggled, I knew there had to be a better way.</p>
+                    <p>NexAI was born from the belief that every business deserves access to cutting-edge AI insights without requiring a team of data scientists or massive budgets. Our platform simplifies complex data analysis into actionable recommendations that drive real growth.</p>
+                    <p>Whether you're optimizing Amazon listings, improving SEO, or maximizing social media ROI, NexAI provides the intelligence you need to make data-driven decisions with confidence.</p>
+                    <div class="signature">- Jay Banlasan, Founder</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Powerful AI-Driven Features</h2>
+                    <p>Our platform combines cutting-edge AI technology with industry expertise to deliver actionable insights</p>
+                </div>
+                <div class="feature-cards">
+                    <div class="card">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3>Amazon Optimization</h3>
+                        <p>Maximize your Amazon sales with our AI-powered listing optimization and PPC management tools.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-search"></i>
+                        <h3>SEO Health</h3>
+                        <p>Comprehensive SEO analysis and recommendations to improve your website's visibility and rankings.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-share-alt"></i>
+                        <h3>Social Media Insights</h3>
+                        <p>Gain valuable insights into your social media performance across Facebook, Instagram, and TikTok.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-robot"></i>
+                        <h3>AI Accuracy</h3>
+                        <p>Our self-improving AI algorithms continuously learn from your data to provide increasingly accurate predictions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard-preview">
+            <div class="container">
+                <div class="section-title">
+                    <h2>See Your Data in Action</h2>
+                    <p>Get a glimpse of what awaits you after login</p>
+                </div>
+                <img src="https://via.placeholder.com/1000x600/f5f7fb/4361ee?text=NexAI+Dashboard+Preview" alt="Dashboard Preview" class="dashboard-img">
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-title">
+                    <h2>What Our Clients Say</h2>
+                    <p>Discover how businesses are transforming with NexAI Agency</p>
+                </div>
+                <div class="testimonial-cards">
+                    <div class="testimonial">
+                        <p>"NexAI's insights helped us increase our Amazon sales by 47% in just two months. The AI recommendations are incredibly accurate."</p>
+                        <div class="client">
+                            <img src="https://via.placeholder.com/50" alt="Client">
+                            <div class="client-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>CEO, E-Commerce Ventures</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <p>"The SEO health dashboard identified critical issues we had missed. Our organic traffic grew by 68% after implementing the suggestions."</p>
+                        <div class="client">
+                            <img src="https://via.placeholder.com/50" alt="Client">
+                            <div class="client-info">
+                                <h4>Michael Chen</h4>
+                                <p>Marketing Director, TechGadgets</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <p>"The AI accuracy metrics give us confidence in the predictions. We've been able to reduce ad spend waste by 32% while maintaining sales."</p>
+                        <div class="client">
+                            <img src="https://via.placeholder.com/50" alt="Client">
+                            <div class="client-info">
+                                <h4>Emily Rodriguez</h4>
+                                <p>E-Commerce Manager, FashionStyle</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>NexAI Agency by Jay Banlasan</h3>
+                        <p>Next generation AI-powered analytics and insights for modern businesses.</p>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Live Chat</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact Info</h3>
+                        <ul>
+                            <li>Email: support@jaybanlasan.com</li>
+                            <li>Phone: +1 (555) 123-4567</li>
+                            <li>Address: 123 AI Street, Tech City, TC 10101</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 NexAI Agency by <a href="https://jaybanlasan.com">Jay Banlasan</a>. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Logged In State - Dashboard -->
+    <div id="logged-in-view" style="display: none;">
+        <div class="app-container">
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <h2>NexAI Agency</h2>
+                </div>
+                <ul class="sidebar-menu">
+                    <li><a href="#" class="active"><i class="fas fa-th-large"></i> <span>Dashboard</span></a></li>
+                    <li><a href="#"><i class="fab fa-amazon"></i> <span>Amazon</span></a></li>
+                    <li><a href="#"><i class="fas fa-search"></i> <span>SEO</span></a></li>
+                    <li><a href="#"><i class="fab fa-facebook"></i> <span>Meta Ads</span></a></li>
+                    <li><a href="#"><i class="fas fa-chart-line"></i> <span>AI Insights & Accuracy</span></a></li>
+                </ul>
+            </aside>
+
+            <main class="main-content">
+                <div class="dashboard-header">
+                    <div class="client-selector">
+                        <span>Client Account:</span>
+                        <select>
+                            <option>TechGadgets Inc.</option>
+                            <option>FashionStyle Co.</option>
+                            <option>HomeEssentials Ltd.</option>
+                            <option>FitLife Products</option>
+                        </select>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn btn-outline" onclick="showModal('support-modal')">
+                            <i class="fas fa-question-circle"></i> Support
+                        </button>
+                        <button class="btn btn-outline" onclick="logout()">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="stat-card">
+                        <h3>Amazon SEO Health</h3>
+                        <div class="value">78%</div>
+                        <div class="trend"><i class="fas fa-arrow-up"></i> 12% from last month</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Amazon PPC Performance</h3>
+                        <div class="value">4.2 ROAS</div>
+                        <div class="trend"><i class="fas fa-arrow-up"></i> 0.8 from last week</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Website SEO Score</h3>
+                        <div class="value">86%</div>
+                        <div class="trend"><i class="fas fa-arrow-up"></i> 5% from last month</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Social Media Engagement</h3>
+                        <div class="value">+24%</div>
+                        <div class="trend"><i class="fas fa-arrow-up"></i> 7% from last week</div>
+                    </div>
+                </div>
+
+                <div class="ai-insights">
+                    <h2>AI Insights & Recommendations</h2>
+                    <div class="insight-text">
+                        <p>Your Amazon listings are 78% optimized. Improving bullet points could add 12% more weekly sales. Consider adding more high-quality images to increase conversion rate by approximately 8%.</p>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h2>Projected vs Actual Sales</h2>
+                    <div class="chart-placeholder">
+                        [Sales Comparison Chart]
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="chart-container">
+                        <h2>AI Accuracy</h2>
+                        <div class="accuracy-gauge">
+                            <div class="gauge-value">86%</div>
+                            <div class="gauge-label">Current Prediction Accuracy</div>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <h2>Top Performing Products</h2>
+                        <div class="chart-placeholder">
+                            [Product Performance Chart]
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Auth Modal (Login/Signup) -->
+    <div class="modal" id="auth-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('auth-modal')">&times;</button>
+            
+            <div class="tabs">
+                <div class="tab active" data-tab="login">Login</div>
+                <div class="tab" data-tab="signup">Sign Up</div>
+            </div>
+            
+            <div class="tab-content active" id="login-tab">
+                <div class="modal-header">
+                    <h2>Login to Your Account</h2>
+                    <p>Enter your credentials to access the dashboard</p>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="login-email">Email Address</label>
+                        <input type="email" id="login-email" placeholder="name@company.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" placeholder="Enter your password">
+                    </div>
+                    <button type="button" class="btn btn-primary" style="width: 100%;" onclick="login()">Login to Dashboard</button>
+                </form>
+                <div class="form-footer">
+                    Don't have an account? <a href="#" onclick="switchTab('signup')">Sign up</a>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="signup-tab">
+                <div class="modal-header">
+                    <h2>Create an Account</h2>
+                    <p>Sign up to start using NexAI Agency</p>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="signup-name">Full Name</label>
+                        <input type="text" id="signup-name" placeholder="Your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email Address</label>
+                        <input type="email" id="signup-email" placeholder="name@company.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" placeholder="Create a password">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-confirm">Confirm Password</label>
+                        <input type="password" id="signup-confirm" placeholder="Confirm your password">
+                    </div>
+                    <button type="button" class="btn btn-primary" style="width: 100%;" onclick="signup()">Create Account</button>
+                </form>
+                <div class="form-footer">
+                    Already have an account? <a href="#" onclick="switchTab('login')">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Support Modal -->
+    <div class="modal" id="support-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('support-modal')">&times;</button>
+            <div class="modal-header">
+                <h2>Support Center</h2>
+                <p>How can we help you today?</p>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <button class="btn btn-primary" style="width: 100%; margin-bottom: 15px;">
+                    <i class="fas fa-comments"></i> Live Chat
+                </button>
+                <button class="btn btn-outline" style="width: 100%; margin-bottom: 15px;">
+                    <i class="fas fa-envelope"></i> Email Support
+                </button>
+                <button class="btn btn-outline" style="width: 100%;">
+                    <i class="fas fa-question-circle"></i> FAQ & Help Articles
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to show modal and specific tab
+        function showModal(modalId, tabName) {
+            document.getElementById(modalId).style.display = 'flex';
+            if (tabName) {
+                switchTab(tabName);
+            }
+        }
+
+        // Function to switch between login/signup tabs
+        function switchTab(tabName) {
+            // Update tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+                if (tab.dataset.tab === tabName) {
+                    tab.classList.add('active');
+                }
+            });
+            
+            // Update tab content
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+                if (content.id === tabName + '-tab') {
+                    content.classList.add('active');
+                }
+            });
+        }
+
+        // Function to close modal
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+
+        // Function to handle login
+        function login() {
+            document.getElementById('logged-out-view').style.display = 'none';
+            document.getElementById('logged-in-view').style.display = 'block';
+            closeModal('auth-modal');
+        }
+
+        // Function to handle signup
+        function signup() {
+            // In a real application, you would validate and process the signup here
+            alert('Account created successfully! You are now logged in.');
+            login(); // Automatically log the user in after signup
+        }
+
+        // Function to handle logout
+        function logout() {
+            document.getElementById('logged-out-view').style.display = 'block';
+            document.getElementById('logged-in-view').style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        }
+
+        // Tab switching functionality
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                switchTab(this.dataset.tab);
+            });
+        });
+    </script>
+</body>
+</html>
